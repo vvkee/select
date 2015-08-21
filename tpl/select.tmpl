@@ -1,0 +1,23 @@
+<div class="select-box">
+	<div class="selected">
+		<span class="selected-text" data-value="" title="请选择">请选择</span>
+		<i class="select-box-icon-drop down"></i>
+	</div>
+	<ul class="select-option">
+		<# var length = options.length #>
+		<# if(length > 0){ #>
+			<li class="active" data-value="" title="请选择">
+				<a href="javaScript:">请选择</a>
+			</li>
+			<# for(var i = 0; i < length; i++){ #>
+				<li data-value="<#= options[i].value #>" title="<#= options[i].text #>">
+					<a href="javaScript:"><#= options[i].text #></a>
+				</li>
+			<# } #>
+		<# }else{ #>
+			<li class="active" data-value="" title="请选择">
+				<a href="javaScript:">请选择</a>
+			</li>
+		<# } #>
+	</ul>
+</div>
